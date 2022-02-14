@@ -994,6 +994,10 @@
   display: block;
   margin-top: 0px;
   margin-bottom: 0px;
+  -webkit-transform: rotateX(0deg) rotateY(180deg) rotateZ(0deg);
+  transform: rotateX(0deg) rotateY(180deg) rotateZ(0deg);
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
 }
 
 .text-span-5 {
@@ -1651,7 +1655,8 @@
   }
 
   .image-2 {
-    width: 250px;
+    width: 300px;
+    height: 300px;
     margin-top: 20px;
     margin-bottom: 20px;
   }
@@ -1994,6 +1999,7 @@
 
   .image-2 {
     width: 220px;
+    height: 220px;
     margin-top: 10px;
     margin-bottom: 20px;
   }
@@ -2092,36 +2098,13 @@
   }
 
   .brand.w--current {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    width: 80%;
+    width: 60%;
     height: 100%;
     margin-top: 0px;
     margin-bottom: 0px;
-    padding-top: 10px;
+    padding-top: 20px;
     padding-bottom: 10px;
     padding-left: 5px;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-  }
-
-  .wrapper {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
   }
 
   .wrapper.grid {
@@ -2159,12 +2142,9 @@
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    width: 20%;
     height: 100%;
     padding: 20px 5px 10px 0px;
-    -webkit-box-pack: end;
-    -webkit-justify-content: flex-end;
-    -ms-flex-pack: end;
-    justify-content: flex-end;
     -webkit-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
@@ -2239,6 +2219,7 @@
 
   .number {
     color: rgba(132, 145, 160, 0.5);
+    font-size: 100px;
     text-align: left;
   }
 
@@ -2361,7 +2342,8 @@
   }
 
   .image-2 {
-    width: 190px;
+    width: 180px;
+    height: 180px;
     margin-top: -10px;
     margin-bottom: 32px;
   }
@@ -2473,7 +2455,7 @@
   }
 
   .lottie-animation {
-    width: 45px;
+    width: 100%;
     margin-top: auto;
     margin-bottom: auto;
   }
