@@ -393,10 +393,28 @@
 .number {
   display: inline-block;
   margin-bottom: 8px;
+  background-color: rgba(132, 145, 160, 0.5);
+  -webkit-transition: all 400ms ease;
+  transition: all 400ms ease;
   font-family: Plusjakartatext, sans-serif;
   color: rgba(132, 145, 160, 0.5);
   font-size: 117px;
   line-height: 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.number:hover {
+  background-color: #609bff;
+  -webkit-filter: brightness(122%);
+  filter: brightness(122%);
+  -webkit-transform: translate(0px, -4px);
+  -ms-transform: translate(0px, -4px);
+  transform: translate(0px, -4px);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .number.next_job {
