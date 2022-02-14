@@ -114,22 +114,24 @@
   border-width: 1px;
   border-color: #5221e6;
   background-color: transparent;
-  -webkit-transition: background-color 500ms cubic-bezier(0, .539, 0, 1.019), background-color 400ms cubic-bezier(.77, 0, .175, 1);
-  transition: background-color 500ms cubic-bezier(0, .539, 0, 1.019), background-color 400ms cubic-bezier(.77, 0, .175, 1);
+  -webkit-transition: background-color 200ms ease-in, background-color 200ms ease-in-out;
+  transition: background-color 200ms ease-in, background-color 200ms ease-in-out;
   color: #fff;
   font-weight: 700;
 }
 
 .nav-link.button:hover {
-  background-color: transparent;
-  background-image: linear-gradient(45deg, #5221e6, #e95d90);
+  background-color: #a386fb;
 }
 
 .hero-section {
-  position: static;
+  position: relative;
+  z-index: 9;
   height: 85vh;
   padding-right: 72px;
   padding-left: 180px;
+  background-color: rgba(7, 4, 19, 0.64);
+  color: #fff;
 }
 
 .hero-image-box {
@@ -305,7 +307,10 @@
 }
 
 .experience {
+  position: relative;
+  z-index: 99;
   padding: 140px 72px 120px;
+  background-color: #070413;
 }
 
 .overline_16px {
@@ -530,6 +535,8 @@
 }
 
 .skills {
+  position: relative;
+  z-index: 99;
   padding: 120px 72px;
   background-color: #070413;
 }
@@ -574,7 +581,8 @@
 }
 
 .skillset-grid-child {
-  padding-right: 48px;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
 .heading_40 {
@@ -664,6 +672,8 @@
 }
 
 .projects-section {
+  position: relative;
+  z-index: 99;
   margin-top: 0px;
   margin-right: 0px;
   margin-left: 0px;
@@ -897,7 +907,10 @@
 }
 
 .testimonial-section {
+  position: relative;
+  z-index: 99;
   padding: 120px 72px;
+  background-color: rgba(7, 4, 19, 0.44);
 }
 
 .testimonial-block._120px-bottom_margin {
@@ -922,6 +935,8 @@
   border-width: 1px;
   border-color: #181823;
   background-color: #060314;
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
 }
 
 .testimonial-text:hover {
@@ -1059,7 +1074,10 @@
 }
 
 .get-in-touch {
+  position: relative;
+  z-index: 99;
   padding: 140px 140px 40px;
+  background-color: rgba(7, 4, 19, 0.44);
 }
 
 .footer-bottom {
@@ -1422,6 +1440,41 @@
   color: #609bff;
 }
 
+.content--canvas {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 1px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #fff;
+}
+
+.headline {
+  position: relative;
+  z-index: 10;
+  margin-top: 2px;
+  margin-bottom: 20px;
+  font-size: 80px;
+  line-height: 110%;
+}
+
+.div-block-6 {
+  width: 100%;
+  height: 900px;
+}
+
 @media screen and (max-width: 991px) {
   .brand.w--current {
     margin-top: 0px;
@@ -1567,7 +1620,7 @@
   }
 
   .skills {
-    padding: 80px 40px;
+    padding: 80px 20px;
   }
 
   .logo-grids {
@@ -1862,7 +1915,6 @@
     margin-top: 0px;
     margin-left: 0px;
     padding: 0px 0px 40px;
-    background-color: #070413;
   }
 
   .paragraph_20.dark-grey {
@@ -1919,7 +1971,8 @@
   }
 
   .skills {
-    padding: 64px 40px;
+    padding-top: 64px;
+    padding-bottom: 64px;
   }
 
   .skillset-grid-child {
@@ -2267,6 +2320,7 @@
 
   .skillset-grid-child {
     padding-right: 0px;
+    padding-left: 0px;
   }
 
   .heading_40 {
@@ -2473,9 +2527,10 @@
   }
 
   .lottie-animation {
-    width: 100%;
+    width: 75%;
     margin-top: auto;
     margin-bottom: auto;
+    margin-left: auto;
   }
 
   .scroll-down.grid {
