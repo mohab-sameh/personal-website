@@ -907,6 +907,7 @@
 }
 
 .testimonial-section {
+  display: none;
   position: relative;
   z-index: 99;
   padding: 120px 72px;
