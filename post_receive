@@ -1,0 +1,29 @@
+// This function serves as the Payload URL for Github's webhook
+// https://github.com/reponame/projectname/settings/hooks/
+public function post_receive() 
+{
+    // copied from 'https://gist.github.com/1809044'
+    $commands = array(
+        'hostname',
+        'echo $PWD',
+        'whoami',
+        'git fetch',
+        'branch=$(git symbolic-ref -q --short HEAD)',
+        'git reset --hard origin/$branch',
+        'git pull',
+        'git status'
+    );
+
+    // Run the commands for output
+    $output = '';
+    foreach($commands AS $command){
+        // Run it
+        $tmp = shell_exec($command);
+        // Output
+        $output .= "<span style=\"color: #6BE234;\">\$</span> <span style=\"color: #729FCF;\">{$command}\n</span>";
+        $output .= htmlentities(trim($tmp)) . PHP_EOL.'<br/>';
+    }
+
+    print_r($output);
+
+}
